@@ -7,11 +7,14 @@ class Circulo:
     def calcular_area(self):
         return math.pi * (self.radio ** 2)
 
-circulo1 = Circulo(5)  
-circulo2 = Circulo(10)  
+radio1 = float(input("Introduce el radio del primer círculo: "))
+radio2 = float(input("Introduce el radio del segundo círculo: "))
+
+circulo1 = Circulo(radio1)
+circulo2 = Circulo(radio2)
 
 area1 = circulo1.calcular_area()
 area2 = circulo2.calcular_area()
 
-print("Área del círculo 1 con radio", circulo1.radio, "es:", round(area1, 2))
-print("Área del círculo 2 con radio", circulo2.radio, "es:", round(area2, 2))
+print(f"Área del primer círculo con radio {circulo1.radio}: {area1:.2f}")
+print(f"Área del segundo círculo con radio {circulo2.radio}: {area2:.2f}")
